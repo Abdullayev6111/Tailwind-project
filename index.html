@@ -16,6 +16,16 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <script>
@@ -32,6 +42,7 @@
         fontFamily: {
           exo: ["Exo 2"],
           sanspt: ["PT Sans"],
+          grotesk: ["Familjen Grotesk"],
         },
         extend: {
           borderRadius: {
@@ -1551,9 +1562,59 @@
       </div>
     </section>
     <section
-      class="container bg-teal-700 max-w-[1440px] h-[365px] mx-auto mt-[150px]"
+      class="container bg-teal-700 max-w-[1440px] h-[365px] mx-auto mt-[150px] flex"
     >
-      <div></div>
+      <h1
+        class="font-grotesk text-[60px] text-white font-medium pt-[80px] pl-[150px]"
+      >
+        LOGO
+      </h1>
+      <div
+        class="w-[350px] h-[160px] mt-[80px] ml-[130px] flex justify-between"
+      >
+        <div class="flex flex-col">
+          <h3 class="text-white font-exo font-medium text-[13px]">Каталог</h3>
+          <h3 class="text-white font-exo font-medium mt-[20px] text-[13px]">
+            О Компании
+          </h3>
+          <h3 class="text-white font-exo font-medium mt-[20px] text-[13px]">
+            Индивидуальная
+          </h3>
+          <h3 class="text-white font-exo font-medium mt-[25px] text-[13px]">
+            Партнерам
+          </h3>
+        </div>
+        <div class="flex flex-col">
+          <h3 class="text-white font-exo font-medium text-[13px]">
+            2D, 3D модели
+          </h3>
+          <h3 class="text-white font-exo font-medium mt-[15px] text-[13px]">
+            Шоу-румы
+          </h3>
+          <h3 class="text-white font-exo font-medium mt-[15px] text-[13px]">
+            Дилерам
+          </h3>
+          <h3 class="text-white font-exo font-medium mt-[15px] text-[13px]">
+            Контакты
+          </h3>
+          <h3 class="text-white font-exo font-medium mt-[15px] text-[13px]">
+            Конфигуратор
+          </h3>
+        </div>
+      </div>
+      <div class="w-[275px] h-[160px] mt-[80px] ml-[130px] flex flex-wrap">
+        <div
+          class="border-1 border-white w-[28px] h-[28px] rounded-[50%]"
+        ></div>
+        <div
+          class="border-1 border-white ml-[15px] w-[28px] h-[28px] rounded-[50%]"
+        ></div>
+        <button class="w-full h-[42px] bg-amber-500 mt-[85px]">
+          <h1 class="text-white">
+            EMAIL <i class="fa-solid fa-arrow-right ml-[170px]"></i>
+          </h1>
+        </button>
+      </div>
     </section>
   </body>
 </html>
