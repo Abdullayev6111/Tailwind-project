@@ -4,31 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
+  <script>
+    const colors = require("tailwindcss/colors");
 
+    module.exports = {
+      theme: {
+        colors: {
+          gray: colors.coolGray,
+          blue: colors.lightBlue,
+          red: colors.rose,
+          pink: colors.fuchsia,
+        },
+        fontFamily: {
+          exo: ["Exo 2"],
+          sanspt: ["PT Sans"],
+        },
+        extend: {
+          borderRadius: {
+            "4xl": "2rem",
+          },
+        },
+        container: {
+          center: true,
+        },
+      },
+    };
+  </script>
   <body>
-    <section
-      class="container mx-auto max-w-[1440px] flex justify-between mt-[100px]"
-    >
-      <div class="px-[80px]">
-        <h1 class="text-[52px] font-semibold leading-none mt-[100px]">
-          Поставщик Дальнего Востока
-        </h1>
-        <p class="text-zinc-600 font-normal text-base mb-[40px] mt-[40px]">
-          Наши клиенты получают полный спектр услуг по работе с Китаем. Начиная
-          с подбора производителя заканчивая доставкой товара до двери.
-          Настолько прозрачных сделок с Китаем вы еще не осуществляли.
-        </p>
-        <button class="text-zinc-700 font-bold border-b-3 border-yellow-400">
-          Узнать больше
-        </button>
+    <section class="container max-w-[1440px] mt-[100px]">
+      <div class="w-[1240px] mx-auto flex justify-between">
+        <div>
+          <h1
+            class="text-[52px] font-semibold font-exo leading-none mt-[100px]"
+          >
+            Поставщик Дальнего Востока
+          </h1>
+          <p
+            class="text-zinc-600 font-normal text-base mb-[40px] mt-[40px] font-sanspt"
+          >
+            Наши клиенты получают полный спектр услуг по работе с Китаем.
+            Начиная с подбора производителя заканчивая доставкой товара до
+            двери. Настолько прозрачных сделок с Китаем вы еще не осуществляли.
+          </p>
+          <button
+            class="text-zinc-700 font-bold font-sanspt border-b-3 border-yellow-400"
+          >
+            Узнать больше
+          </button>
+        </div>
+        <img src="./assets/images/hero img.png" alt="Hero img" />
       </div>
-      <img src="./assets/images/hero img.png" alt="Hero img" />
     </section>
-    <section class="container mx-auto max-w-[1440px] mt-[100px]">
+    <section class="container max-w-[1440px] mt-[100px]">
       <div
-        class="mx-auto max-w-[1240px] flex justify-between py-[40px] px-[100px] rounded-[20px] shadow-md shadow-black"
+        class="mx-auto max-w-[1240px] flex justify-between py-[40px] px-[100px] rounded-[20px] shadow-sm shadow-black"
       >
         <div class="w-[228px] h-[245px]">
           <div
@@ -36,10 +79,10 @@
           >
             <img src="./assets/images/services-img.png" alt="" />
           </div>
-          <h1 class="text-[20px] font-semibold mt-[10px]">
+          <h1 class="text-[20px] font-semibold mt-[10px] font-exo">
             Поиск производителей по товару
           </h1>
-          <p class="text-zinc-600 font-base mt-[10px]">
+          <p class="text-zinc-600 font-base mt-[10px] font-sanspt">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod incididunt ut.
           </p>
@@ -50,10 +93,10 @@
           >
             <img src="./assets/images/services-img (2).png" alt="" />
           </div>
-          <h1 class="text-[20px] font-semibold mt-[10px]">
+          <h1 class="text-[20px] font-semibold mt-[10px] font-exo">
             Поиск конкретного производителя
           </h1>
-          <p class="text-zinc-600 font-base mt-[10px]">
+          <p class="text-zinc-600 font-base mt-[10px] font-sanspt">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod incididunt ut.
           </p>
@@ -64,24 +107,24 @@
           >
             <img src="./assets/images/services-img (3).png" alt="" />
           </div>
-          <h1 class="text-[20px] font-semibold mt-[10px]">
+          <h1 class="text-[20px] font-semibold mt-[10px] font-exo">
             Доставка образцов товаров
           </h1>
-          <p class="text-zinc-600 font-base mt-[10px]">
+          <p class="text-zinc-600 font-base mt-[10px] font-sanspt">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod incididunt ut.
           </p>
         </div>
       </div>
     </section>
-    <section class="container max-w-[1440px] mx-auto">
+    <section class="container max-w-[1440px]">
       <div
         class="mx-auto max-w-[1240px] h-[455px] bg-[url('./assets/images/why-us-img.png')] bg-cover bg-center relative"
       >
         <div
           class="h-full w-[770px] mt-[70px] bg-[url('./assets/images/why-us-img-2.png')] flex items-center pl-[70px]"
         >
-          <h1 class="text-white text-5xl font-semibold text-center">
+          <h1 class="text-white text-5xl font-semibold text-center font-exo">
             Почему с нами <br />выгоднее?
           </h1>
         </div>
@@ -98,10 +141,10 @@
             <img src="./assets/images/lock.png" alt="" />
           </div>
           <div class="flex flex-col w-[295px]">
-            <h1 class="font-semibold text-[20px] text-zinc-900">
+            <h1 class="font-semibold text-[20px] text-zinc-900 font-exo">
               Lorem ipsum dolor sit amet
             </h1>
-            <p class="font-base text-[16px] text-zinc-600">
+            <p class="font-base text-[16px] text-zinc-600 font-sanspt">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod ut.
             </p>
@@ -116,10 +159,10 @@
             <img src="./assets/images/check-list.png" alt="" />
           </div>
           <div class="flex flex-col w-[295px]">
-            <h1 class="font-semibold text-[20px] text-zinc-900">
+            <h1 class="font-semibold text-[20px] text-zinc-900 font-exo">
               Lorem ipsum dolor sit amet
             </h1>
-            <p class="font-base text-[16px] text-zinc-600">
+            <p class="font-base text-[16px] text-zinc-600 font-sanspt">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod ut.
             </p>
@@ -134,10 +177,10 @@
             <img src="./assets/images/money.png" alt="" />
           </div>
           <div class="flex flex-col w-[295px]">
-            <h1 class="font-semibold text-[20px] text-zinc-900">
+            <h1 class="font-semibold text-[20px] text-zinc-900 font-exo">
               Lorem ipsum dolor sit amet
             </h1>
-            <p class="font-base text-[16px] text-zinc-600">
+            <p class="font-base text-[16px] text-zinc-600 font-sanspt">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod ut.
             </p>
@@ -152,10 +195,10 @@
             <img src="./assets/images/location.png" alt="" />
           </div>
           <div class="flex flex-col w-[295px]">
-            <h1 class="font-semibold text-[20px] text-zinc-900">
+            <h1 class="font-semibold text-[20px] text-zinc-900 font-exo">
               Lorem ipsum dolor sit amet
             </h1>
-            <p class="font-base text-[16px] text-zinc-600">
+            <p class="font-base text-[16px] text-zinc-600 font-sanspt">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod ut.
             </p>
@@ -163,10 +206,12 @@
         </div>
       </div>
     </section>
-    <section class="container max-w-[1440px] mx-auto">
+    <section class="container max-w-[1440px]">
       <div class="mx-auto max-w-[1240px] h-[620px] mt-[130px]">
-        <h1 class="font-semibold text-5xl text-zinc-800">Выполненные работы</h1>
-        <p class="font-base text-[16px] text-zinc-600 mt-[30px]">
+        <h1 class="font-semibold text-5xl text-zinc-800 font-exo">
+          Выполненные работы
+        </h1>
+        <p class="font-base text-[16px] text-zinc-600 mt-[30px] font-sanspt">
           Мы собрали информацию по грузам, которые мы уже доставили.<br /> У нас
           специальный подход к каждому виду товаров.
         </p>
@@ -176,10 +221,12 @@
           >
             <img src="./assets/images/our-works-card1.png" alt="" />
             <div class="pl-[50px] pt-[25px]">
-              <h2 class="text-[20px] font-semibold text-zinc-800">
+              <h2 class="text-[20px] font-semibold text-zinc-800 font-exo">
                 Станки и оборудование
               </h2>
-              <p class="font-base text-[16px] text-zinc-600 mt-[7px]">
+              <p
+                class="font-base text-[16px] text-zinc-600 mt-[7px] font-sanspt"
+              >
                 Lorem ipsum dolor sit amet, consectetur <br />
                 adipiscing elit, sed do eiusmod ut.
               </p>
@@ -195,10 +242,12 @@
           >
             <img src="./assets/images/our-works-card2.png" alt="" />
             <div class="pl-[50px] pt-[25px]">
-              <h2 class="text-[20px] font-semibold text-zinc-800">
+              <h2 class="text-[20px] font-semibold text-zinc-800 font-exo">
                 Компоненты и запчасти
               </h2>
-              <p class="font-base text-[16px] text-zinc-600 mt-[7px]">
+              <p
+                class="font-base text-[16px] text-zinc-600 mt-[7px] font-sanspt"
+              >
                 Lorem ipsum dolor sit amet, consectetur <br />
                 adipiscing elit, sed do eiusmod ut.
               </p>
@@ -214,10 +263,12 @@
           >
             <img src="./assets/images/our-works-card3.png" alt="" />
             <div class="pl-[50px] pt-[25px]">
-              <h2 class="text-[20px] font-semibold text-zinc-800">
+              <h2 class="text-[20px] font-semibold text-zinc-800 font-exo">
                 Станки и оборудование
               </h2>
-              <p class="font-base text-[16px] text-zinc-600 mt-[7px]">
+              <p
+                class="font-base text-[16px] text-zinc-600 mt-[7px] font-sanspt"
+              >
                 Lorem ipsum dolor sit amet, consectetur <br />
                 adipiscing elit, sed do eiusmod ut.
               </p>
@@ -231,11 +282,11 @@
         </div>
       </div>
     </section>
-    <section class="container max-w-[1440px] mx-auto">
+    <section class="container max-w-[1440px]">
       <div
         class="mx-auto max-w-[1240px] h-[920px] bg-teal-700 mt-[170px] pt-[80px] pl-[70px] flex"
       >
-        <h1 class="text-5xl font-semibold text-white">
+        <h1 class="text-5xl font-semibold text-white font-exo">
           Привлеченные <br />
           клиенты
         </h1>
@@ -275,7 +326,7 @@
                 fill="#0B7572"
               />
             </svg>
-            <p class="text-zinc-600 text-[11px] font-base">
+            <p class="text-zinc-600 text-[11px] font-base font-sanspt">
               ООО "ПДВ" ИНН 7329023100 КПП 732901001 <br />
               433405, Ульяновская обл., Территория Портовой особой <br />
               Экономической зоны, Проезд Первых Резидентов 3 <br />
@@ -285,10 +336,16 @@
           <div
             class="w-[588px] mx-auto mt-[40px] h-[50px] bg-teal-700 flex items-center justify-between px-[45px]"
           >
-            <h1 class="text-white text-[16px] font-semibold">Фото</h1>
-            <h1 class="text-white text-[16px] font-semibold">Название</h1>
-            <h1 class="text-white text-[16px] font-semibold">Производитель</h1>
-            <h1 class="text-white text-[16px] font-semibold">Контакт</h1>
+            <h1 class="text-white text-[16px] font-semibold font-exo">Фото</h1>
+            <h1 class="text-white text-[16px] font-semibold font-exo">
+              Название
+            </h1>
+            <h1 class="text-white text-[16px] font-semibold font-exo">
+              Производитель
+            </h1>
+            <h1 class="text-white text-[16px] font-semibold font-exo">
+              Контакт
+            </h1>
           </div>
           <div class="w-[588px] h-[508px] mx-auto px-[20px]">
             <div class="border-b-1 border-zinc-300 mt-[10px] flex">
@@ -300,19 +357,23 @@
               <div
                 class="w-[150px] border-r border-l border-zinc-300 ml-[20px] p-[10px]"
               >
-                <p class="font-base text-[14px] text-zinc-600">
+                <p class="font-base text-[14px] text-zinc-600 font-sanspt">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod.
                 </p>
-                <h2 class="font-semibold text-[14px] text-zinc-800 mt-[10px]">
+                <h2
+                  class="font-semibold text-[14px] text-zinc-800 mt-[10px] font-exo"
+                >
                   120 000 руб.
                 </h2>
               </div>
               <div class="w-[190px] border-r border-zinc-300 p-[10px]">
-                <h1 class="font-bold text-[14px] text-zinc-800">
+                <h1 class="font-bold text-[14px] text-zinc-800 font-sanspt">
                   Завод “Hlobalkhim”
                 </h1>
-                <p class="font-base text-[14px] text-zinc-600 mt-[5px]">
+                <p
+                  class="font-base text-[14px] text-zinc-600 mt-[5px] font-sanspt"
+                >
                   г. Москва, проспект Кутузовский, д. 12 стр. 1 этаж, пом. 1
                 </p>
                 <div class="flex mt-[10px]">
@@ -387,13 +448,17 @@
                 </div>
               </div>
               <div class="w-[140px] p-[9px]">
-                <h1 class="font-bold text-[14px] text-zinc-800">
+                <h1 class="font-bold text-[14px] text-zinc-800 font-sanspt">
                   Коваль Иван Борисович
                 </h1>
-                <p class="font-base text-[14px] text-zinc-600 mt-[5px]">
+                <p
+                  class="font-base text-[14px] text-zinc-600 mt-[5px] font-sanspt"
+                >
                   Руководитель отдела поставок
                 </p>
-                <h3 class="font-base text-[14px] text-zinc-900 mt-[5px]">
+                <h3
+                  class="font-base text-[14px] text-zinc-900 mt-[5px] font-sanspt"
+                >
                   + 7 (495) 765 33 22
                 </h3>
               </div>
@@ -407,19 +472,23 @@
               <div
                 class="w-[150px] border-r border-l border-zinc-300 ml-[20px] p-[10px]"
               >
-                <p class="font-base text-[14px] text-zinc-600">
+                <p class="font-base text-[14px] text-zinc-600 font-sanspt">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod.
                 </p>
-                <h2 class="font-semibold text-[14px] text-zinc-800 mt-[10px]">
+                <h2
+                  class="font-semibold text-[14px] text-zinc-800 mt-[10px] font-exo"
+                >
                   50 000 руб.
                 </h2>
               </div>
               <div class="w-[190px] border-r border-zinc-300 p-[10px]">
-                <h1 class="font-bold text-[14px] text-zinc-800">
+                <h1 class="font-bold text-[14px] text-zinc-800 font-sanspt">
                   Даниловский строительный завод
                 </h1>
-                <p class="font-base text-[14px] text-zinc-600 mt-[5px]">
+                <p
+                  class="font-base text-[14px] text-zinc-600 mt-[5px] font-sanspt"
+                >
                   Москва, Даниловская наб., д. 8 стр. 1 этаж, пом. 2
                 </p>
                 <div class="flex mt-[10px]">
@@ -488,13 +557,17 @@
                 </div>
               </div>
               <div class="w-[140px] p-[9px]">
-                <h1 class="font-bold text-[14px] text-zinc-800">
+                <h1 class="font-bold text-[14px] text-zinc-800 font-sanspt">
                   Лубен Валерий Вячеславович
                 </h1>
-                <p class="font-base text-[14px] text-zinc-600 mt-[5px]">
+                <p
+                  class="font-base text-[14px] text-zinc-600 mt-[5px] font-sanspt"
+                >
                   Руководитель отдела поставок
                 </p>
-                <h3 class="font-base text-[14px] text-zinc-900 mt-[5px]">
+                <h3
+                  class="font-base text-[14px] text-zinc-900 mt-[5px] font-sanspt"
+                >
                   + 7 (495) 765 33 22
                 </h3>
               </div>
@@ -508,19 +581,23 @@
               <div
                 class="w-[150px] border-r border-l border-zinc-300 ml-[20px] p-[10px]"
               >
-                <p class="font-base text-[14px] text-zinc-600">
+                <p class="font-base text-[14px] text-zinc-600 font-sanspt">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod.
                 </p>
-                <h2 class="font-semibold text-[14px] text-zinc-800 mt-[10px]">
+                <h2
+                  class="font-semibold text-[14px] text-zinc-800 mt-[10px] font-exo"
+                >
                   120 000 руб.
                 </h2>
               </div>
               <div class="w-[190px] border-r border-zinc-300 p-[10px]">
-                <h1 class="font-bold text-[14px] text-zinc-800">
+                <h1 class="font-bold text-[14px] text-zinc-800 font-sanspt">
                   Завод “Hlobalkhim”
                 </h1>
-                <p class="font-base text-[14px] text-zinc-600 mt-[5px]">
+                <p
+                  class="font-base text-[14px] text-zinc-600 mt-[5px] font-sanspt"
+                >
                   г. Москва, проспект Кутузовский, д. 12 стр. 1 этаж, пом. 1
                 </p>
                 <div class="flex mt-[10px]">
@@ -595,13 +672,17 @@
                 </div>
               </div>
               <div class="w-[140px] p-[9px]">
-                <h1 class="font-bold text-[14px] text-zinc-800">
+                <h1 class="font-bold text-[14px] text-zinc-800 font-sanspt">
                   Коваль Иван Борисович
                 </h1>
-                <p class="font-base text-[14px] text-zinc-600 mt-[5px]">
+                <p
+                  class="font-base text-[14px] text-zinc-600 mt-[5px] font-sanspt"
+                >
                   Руководитель отдела поставок
                 </p>
-                <h3 class="font-base text-[14px] text-zinc-900 mt-[5px]">
+                <h3
+                  class="font-base text-[14px] text-zinc-900 mt-[5px] font-sanspt"
+                >
                   + 7 (495) 765 33 22
                 </h3>
               </div>
@@ -610,9 +691,9 @@
         </div>
       </div>
     </section>
-    <section class="container max-w-[1440px] mx-auto">
+    <section class="container max-w-[1440px]">
       <div class="w-[1232px] h-[880px] mt-[110px] mx-auto">
-        <h1 class="text-5xl text-zinc-900 font-semibold mt-[5px]">
+        <h1 class="text-5xl text-zinc-900 font-semibold mt-[5px] font-exo">
           Этапы поставки
         </h1>
         <div class="flex justify-end flex-wrap mt-[30px]">
@@ -621,14 +702,16 @@
           >
             <img src="./assets/images/etap-img1.png" alt="" />
             <div class="flex flex-col">
-              <h1 class="font-semibold text-[20px] text-zinc-900 ml-[40px]">
+              <h1
+                class="font-semibold text-[20px] text-zinc-900 ml-[40px] font-exo"
+              >
                 Предложение от продавца
               </h1>
               <div
                 class="bg-yellow-300 w-[86px] h-[3px] ml-[40px] mt-[15px]"
               ></div>
               <p
-                class="font-base text-zinc-600 text-[16px] ml-[40px] mt-[15px]"
+                class="font-base text-zinc-600 text-[16px] ml-[40px] mt-[15px] font-sanspt"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor <br />
@@ -645,14 +728,16 @@
           >
             <img src="./assets/images/etap-img2.png" alt="" />
             <div class="flex flex-col">
-              <h1 class="font-semibold text-[20px] text-zinc-900 ml-[40px]">
+              <h1
+                class="font-semibold text-[20px] text-zinc-900 ml-[40px] font-exo"
+              >
                 Доставка
               </h1>
               <div
                 class="bg-yellow-300 w-[86px] h-[3px] ml-[40px] mt-[15px]"
               ></div>
               <p
-                class="font-base text-zinc-600 text-[16px] ml-[40px] mt-[15px]"
+                class="font-base text-zinc-600 text-[16px] ml-[40px] mt-[15px] font-sanspt"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor <br />
@@ -669,14 +754,16 @@
           >
             <img src="./assets/images/etap-img3.png" alt="" />
             <div class="flex flex-col">
-              <h1 class="font-semibold text-[20px] text-zinc-900 ml-[40px]">
+              <h1
+                class="font-semibold text-[20px] text-zinc-900 ml-[40px] font-exo"
+              >
                 Установка у клиента
               </h1>
               <div
                 class="bg-yellow-300 w-[86px] h-[3px] ml-[40px] mt-[15px]"
               ></div>
               <p
-                class="font-base text-zinc-600 text-[16px] ml-[40px] mt-[15px]"
+                class="font-base text-zinc-600 text-[16px] ml-[40px] mt-[15px] font-sanspt"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor <br />
@@ -687,6 +774,135 @@
                 nunc scelerisque viverra mauris in.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container max-w-[1440px] mt-[90px]">
+      <div class="w-[1212px] h-[576px] mx-auto">
+        <h1 class="font-semibold font-exo text-5xl text-zinc-800">
+          Нам доверяют
+        </h1>
+        <div class="flex flex-wrap justify-between mt-[50px]">
+          <div
+            class="w-[300px] h-[230px] flex justify-center items-center flex-col"
+          >
+            <img
+              class="mb-[20px]"
+              src="./assets/images/companies-logo1.png"
+              alt=""
+            />
+            <h1 class="font-exo font-semibold text-[20px] text-zinc-800">
+              Росатом
+            </h1>
+            <p class="text-[14px] text-zinc-600 font-base font-sanspt">
+              Корпорация атомной энергии
+            </p>
+          </div>
+          <div
+            class="w-[300px] h-[230px] flex justify-center items-center flex-col border-l border-r border-zinc-300"
+          >
+            <img
+              class="mb-[50px]"
+              src="./assets/images/companies-logo2.png"
+              alt=""
+            />
+            <h1 class="font-exo font-semibold text-[20px] text-zinc-800">
+              Газпром
+            </h1>
+            <p class="text-[14px] text-zinc-600 font-base font-sanspt">
+              Энергетическая компания
+            </p>
+          </div>
+          <div
+            class="w-[300px] h-[230px] flex justify-center items-center flex-col border-r border-zinc-300"
+          >
+            <img
+              class="mb-[20px]"
+              src="./assets/images/companies-logo3.png"
+              alt=""
+            />
+            <h1 class="font-exo font-semibold text-[20px] text-zinc-800">
+              Роснефть
+            </h1>
+            <p class="text-[14px] text-zinc-600 font-base font-sanspt">
+              Нефтегазовая компания
+            </p>
+          </div>
+          <div
+            class="w-[300px] h-[230px] flex justify-center items-center flex-col"
+          >
+            <img
+              class="mb-[30px]"
+              src="./assets/images/companies-logo4.png"
+              alt=""
+            />
+            <h1 class="font-exo font-semibold text-[20px] text-zinc-800">
+              Роскосмос
+            </h1>
+            <p class="text-[14px] text-zinc-600 font-base font-sanspt">
+              Корпорация в космической отрасли
+            </p>
+          </div>
+          <div
+            class="w-[300px] h-[230px] mt-[15px] flex flex-col justify-center items-center"
+          >
+            <img
+              class="mb-[50px]"
+              src="./assets/images/companies-logo5.png"
+              alt=""
+            />
+            <h1 class="font-exo font-semibold text-[20px] text-zinc-800">
+              Лукойл
+            </h1>
+            <p class="text-[14px] text-zinc-600 font-base font-sanspt">
+              Нефтяная компания
+            </p>
+          </div>
+          <div
+            class="w-[300px] h-[230px] mt-[15px] flex flex-col justify-center items-center border-l border-r border-zinc-300"
+          >
+            <img
+              class="mb-[30px]"
+              src="./assets/images/companies-logo6.png"
+              alt=""
+            />
+            <h1 class="font-exo font-semibold text-[20px] text-zinc-800">
+              Интер РАО
+            </h1>
+            <p class="text-[14px] text-zinc-600 font-base font-sanspt">
+              Энергетическая компания
+            </p>
+          </div>
+          <div
+            class="w-[300px] h-[230px] mt-[15px] flex flex-col justify-center items-center border-r border-zinc-300"
+          >
+            <img
+              class="mb-[20px]"
+              src="./assets/images/companies-logo7.png"
+              alt=""
+            />
+            <h1 class="font-exo font-semibold text-[20px] text-zinc-800">
+              Ростех
+            </h1>
+            <p class="text-[14px] text-zinc-600 font-base font-sanspt">
+              Промышленная корпорация
+            </p>
+          </div>
+          <div
+            class="w-[300px] h-[230px] mt-[15px] flex flex-col justify-center items-center"
+          >
+            <img
+              class="mb-[60px]"
+              src="./assets/images/companies-logo8.png"
+              alt=""
+            />
+            <h1 class="font-exo font-semibold text-[20px] text-zinc-800">
+              Банк ВТБ
+            </h1>
+            <p class="text-[14px] text-zinc-600 font-base font-sanspt">
+              Коммерческий банк
+            </p>
           </div>
         </div>
       </div>
